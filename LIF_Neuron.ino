@@ -23,7 +23,7 @@ void setup() {
 void loop() {
   unsigned long currentTime = millis();
 
-  // --- REFRACTORY CHECK ---
+  // Refractory Check
   if (inRefractory) {
     if (currentTime - refractoryStart >= refractoryPeriod) {
       inRefractory = false;
@@ -32,14 +32,14 @@ void loop() {
     }
   }
 
-  // --- DECAY ---
+  // Decay
   if (currentTime - lastDecayTime >= decayInterval) {
     lastDecayTime = currentTime;
     membranePotential -= decayRate;
     if (membranePotential < 0) membranePotential = 0;
   }
 
-  // --- BUTTON INPUT ---
+  // Button Input
   int buttonState = digitalRead(buttonPin);
   if (buttonState == HIGH && !buttonWasPressed) {   
     membranePotential++;
@@ -49,7 +49,7 @@ void loop() {
     buttonWasPressed = false;
   }
 
-  // --- FIRE ---
+  // Fire
   if (membranePotential >= threshold) {
     digitalWrite(ledPin, HIGH);
     delay(200);
