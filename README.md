@@ -55,6 +55,6 @@ Wiring tip:
 
 *Note:* This is my first real C++ project, I am more at home in Python. The code is intentionally simple so the biological model stays front and center. The LIF model is the most widely used model in computational neuroscience, and it turns out an Arduino Uno is more than enough hardware to run one!
 
-## 👩‍💻 Author
-Mrunmayee Wankhede
+## 👩‍💻 Author 
+Mrunmayee Wankhede \
 MS-QBB @ CMU
