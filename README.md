@@ -6,13 +6,13 @@ Over spring break, I wanted to see if I could get an Arduino to behave like a ne
 This is a pretty basic C++ sketch, but the biology behind it is real.
 
 ## 💡 Concept
-* Button press → Excitatory Input (EPSP)
+* Button press → Excitatory Input (EPSP) \
   Each press slightly increases the membrane potential.
-* Decay/Leak → Passive membrane property
+* Decay/Leak → Passive membrane property \
   If presses are too far apart, the membrane potential slowly decays back to zero.
-* Threshold → Action potential
+* Threshold → Action potential \
   When the potential exceeds a set threshold, the neuron "fires" and the LED lights up.
-* Refractory period → Rest after firing
+* Refractory period → Rest after firing \
   After firing, the neuron cannot fire again immediately, mimicking biological neurons.
 
 This project combines software modelling of neuron behaviour with physical inputs/outputs on an embedded system.
