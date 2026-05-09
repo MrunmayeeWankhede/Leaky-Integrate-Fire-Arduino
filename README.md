@@ -50,12 +50,15 @@ Wiring tip:
 
 ## Video Demos
 1. The basic spike: Threshold = 3. Three presses → one spike. The neuron sums inputs until it crosses threshold, then fires.
+
 https://github.com/user-attachments/assets/9e48a45a-e946-4617-8c35-13f91926c391
 
 2. The decay leak: Press too slowly and the membrane potential decays back to zero. This is the "leaky" part of leaky-integrate-and-fire. The real neurons lose charge over time too.
+
 https://github.com/user-attachments/assets/de6263b2-5144-4638-b3b7-a9fd277eea42
 
 3. The refractory period: After firing, the neuron ignores input for 1 second. That is its refractory period. Real neurons need time to reset their ion channels before they can fire again.
+
 https://github.com/user-attachments/assets/1b33b4b4-3af3-428c-8939-af07005df129
 
 ## Learning Points
