@@ -1,11 +1,11 @@
-# Leaky-Integrate-Fire-Arduino 🧠
+# Leaky-Integrate-Fire-Arduino 
 A beginner-friendly Arduino project that simulates a neuron using a pushbutton and LED!
 
 Over spring break, I wanted to see if I could get an Arduino to behave like a neuron. I didn't just want it to blink an LED, I wanted it to actually model the integrate-and-fire dynamics that computational neuroscientists use to describe how real neurons work.
 
 This is a pretty basic C++ sketch, but the biology behind it is real.
 
-## 💡 Concept
+## Concept
 * Button press → Excitatory Input (EPSP) \
   Each press slightly increases the membrane potential.
 * Decay/Leak → Passive membrane property \
@@ -17,7 +17,7 @@ This is a pretty basic C++ sketch, but the biology behind it is real.
 
 This project combines software modelling of neuron behaviour with physical inputs/outputs on an embedded system.
 
-## ⚙️ Hardware
+## Hardware
 * Arduino Uno R3 - acts as the neuron
 * Pushbutton on Pin 2 - input signal
 * LED on Pin 13 - output spike
@@ -28,7 +28,7 @@ Wiring tip:
 * Other leg → Pin 2, with a 2kΩ pull-down resistor to GND
 * LED uses built-in pin 13
 
-## 🖥️ Code Highlights
+## Code Highlights
 * ```
   membranePotential++ // adds input from button press
   ```
@@ -42,13 +42,23 @@ Wiring tip:
   refractoryPeriod // prevents immediate firing
   ```
 
-## ⚡️ How It Works
+## How It Works
 1. Press the button repeatedly. Each press adds a small increment to the membrane potential.
 2. If presses are fast enough to reach the threshold, the LED lights up briefly (this is the neuron "spiking").
 3. If presses are too slow, decay subtracts from the potential (like a leaky neuron).
 4. After firing, the neuron enters a refractory perod during which further presses are ignored.
 
-## 🎓 Learning Points
+## Video Demos
+1. The basic spike: Threshold = 3. Three presses → one spike. The neuron sums inputs until it crosses threshold, then fires.
+https://github.com/user-attachments/assets/9e48a45a-e946-4617-8c35-13f91926c391
+
+2. The decay leak: Press too slowly and the membrane potential decays back to zero. This is the "leaky" part of leaky-integrate-and-fire. The real neurons lose charge over time too.
+https://github.com/user-attachments/assets/de6263b2-5144-4638-b3b7-a9fd277eea42
+
+3. The refractory period: After firing, the neuron ignores input for 1 second. That is its refractory period. Real neurons need time to reset their ion channels before they can fire again.
+https://github.com/user-attachments/assets/1b33b4b4-3af3-428c-8939-af07005df129
+
+## Learning Points
 * Got hands-on experience with Arduino and basic C++
 * Learned how a neuron adds up signals, leaks over time, and fires
 * Explored how biology can be simulated using simple electronics
